@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,400&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,400&display=swap');
+@import 'tailwindcss';
+
+/* Terra — Organic Design: "Rooted Warmth" */
+@theme {
+  /* Colors */
+  --color-primary: #4a7c59;
+  --color-primary-hover: #3f6a4b;
+  --color-background: #faf6f0;
+  --color-tertiary: #705c30;
+
+  /* Warm neutrals — every gray carries a yellow/green undertone */
+  --color-neutral-50: #faf8f4;
+  --color-neutral-100: #f3efe6;
+  --color-neutral-200: #e6e0d2;
+  --color-neutral-300: #d1c8b3;
+  --color-neutral-400: #a89d84;
+  --color-neutral-500: #7d7460;
+  --color-neutral-600: #5c5546;
+  --color-neutral-700: #433e33;
+  --color-neutral-800: #2e2b23;
+  --color-neutral-900: #1c1a15;
+
+  /* Borders — outline_variant at low opacity, per spec */
+  --color-outline: rgba(67, 62, 51, 0.16);
+  --color-outline-strong: rgba(67, 62, 51, 0.28);
+
+  /* Focus ring — soft green, for inputs */
+  --color-ring: rgba(74, 124, 89, 0.35);
+
+  /* State colors — desaturated, earthy, no neon hues */
+  --color-success: #4a7c59;
+  --color-success-bg: #eaf1ea;
+  --color-warning: #b8863a;
+  --color-warning-bg: #f6ecd9;
+  --color-error: #b0503b;
+  --color-error-bg: #f6e6e1;
+
+  /* Typography */
+  --font-headline: 'Literata', serif;
+  --font-body: 'Nunito Sans', sans-serif;
+
+  /* Elevation */
+  --shadow-soft: 0 4px 20px rgba(46, 50, 48, 0.06);
+}
+
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-neutral-700);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-headline);
+  color: var(--color-neutral-900);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px var(--color-background) inset;
+  -webkit-text-fill-color: var(--color-neutral-900);
+  transition: background-color 9999s ease-in-out 0s;
+}
