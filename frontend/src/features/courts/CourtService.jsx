@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5050/api/courts';
+const API_URL = `${import.meta.env.VITE_API_URL ?? ''}/api/courts`;
 
 const getAllCourts = async () => {
     const response = await axios.get(API_URL);

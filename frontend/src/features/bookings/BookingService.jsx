@@ -1,8 +1,8 @@
 import axios from 'axios';
 import useAuthStore from '../auth/useAuthStore';
 
-const BOOKING_API_URL = 'http://localhost:5050/api/bookings';
-const PAYMENT_API_URL = 'http://localhost:5050/api/payments';
+const BOOKING_API_URL = `${import.meta.env.VITE_API_URL ?? ''}/api/bookings`;
+const PAYMENT_API_URL = `${import.meta.env.VITE_API_URL ?? ''}/api/payments`;
 
 const authHeader = () => {
     const token = useAuthStore.getState().user?.token;
