@@ -1,0 +1,9 @@
+.gradle
+build
+bin
+.git
+.idea
+.vscode
+*.md
+.env
+*.sql
